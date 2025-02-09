@@ -1,14 +1,16 @@
-// wxt.config.ts
 import { defineConfig } from 'wxt';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   extensionApi: 'chrome',
   modules: ['@wxt-dev/module-react'],
   alias: {
-    '@': './entrypoints/popup',
+    '@': './',
+    '@assets': './assets',
+    '@components': './components',
+    '@composables': './composables', 
+    '@entrypoints': './entrypoints',
+    '@hooks': './hooks',
+    '@modules': './modules',
+    '@utils': './utils'
   },
-  vite: () => ({
-    plugins: [react()],
-  }),
 });
