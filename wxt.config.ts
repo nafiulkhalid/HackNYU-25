@@ -8,11 +8,12 @@ export default defineConfig({
     '@': './',
     '@assets': './assets',
     '@components': './components',
-    '@composables': './composables', 
+    '@composables': './composables',
     '@entrypoints': './entrypoints',
     '@hooks': './hooks',
     '@modules': './modules',
     '@utils': './utils',
-    '@pages': './pages'
+    '@features': './entrypoints/features',
+    '@popup': './entrypoints/popup',   
   },
 } as UserConfig);
