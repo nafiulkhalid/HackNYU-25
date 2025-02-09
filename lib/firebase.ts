@@ -10,7 +10,6 @@ import type {
   User, 
   UserCredential,
 } from 'firebase/auth';
-import type { Runtime } from "webextension-polyfill";
 
 interface FirebaseConfig {
   apiKey: string;
@@ -64,7 +63,7 @@ const auth: Auth = getAuth(app);
 
 chrome.runtime.onMessage.addListener((
   msg: Message, 
-  sender: Runtime.MessageSender, 
+  sender: chrome.runtime.MessageSender, 
   sendResponse: (response: MessageResponse) => void
 ) => {
   if (msg.command === 'logoutAuth') {
@@ -119,7 +118,5 @@ chrome.runtime.onMessage.addListener((
         });
       });
   }
-
-  // Required for async response in Chrome extensions
   return true;
 });
