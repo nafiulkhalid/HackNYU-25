@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Button } from '@/components';
-function App() {
-  const [count, setCount] = useState(0);
+
+export const App = () => {
 
   return (
-    <>
-    </>
+    <main className="">
+      
+    </main>
   );
 }
-
+App.displayName = 'App';
 export default App;
