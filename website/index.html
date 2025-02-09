@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genie Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="#">Genie</a>
+    </div>
+
+    <ul class="navbar-features">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+
+    <div class="navbar-auth">
+      <a href="signin.html" class="btn">Sign In</a>
+      <a href="signup.html" class="btn signup-btn">Sign Up</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#feature1">Overview</a></li>
+      <li><a href="#feature2">Stats</a></li>
+      <li><a href="#feature3">Features</a></li>
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+  </div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <!-- Blurry Moving Balls -->
+    <div class="blurry-ball ball1"></div>
+    <div class="blurry-ball ball2"></div>
+    <div class="blurry-ball ball3"></div>
+  
+    <div class="hero-content">
+      <div class="hero-logo-container">
+        <h1 class="hero-header">Genie</h1>
+        <img src="logo.png" alt="Genie Logo" class="hero-logo" />
+      </div>
+        <h2 class="hero-tagline">save more, shop more</h2>
+  
+        <!-- Download Button -->
+        <a href="download.png" download="Genie-Download" class="download-btn">Download</a>
+
+    </div>
+  </section>
+  
+
+<!-- Overview Section -->
+<section class="overview-section" id="overview">
+    <h2 class="overview-title">Overview</h2> <!-- Centered Section Heading -->
+  
+    <div class="overview-content">
+      <div class="overview-text">
+        <!-- Subheading 1 -->
+        <h6>Genie Who?</h6>
+        <hr>
+        <p>
+          We’re a lightweight browser extension designed to give you personalized spending insights, making it easier than ever to shop smarter and save more.
+        </p>
+  
+        <!-- Subheading 2 -->
+        <h6>Our Mission?</h6>
+        <hr>
+        <p>
+          To help you make the most of your money—whether that means cutting back on unnecessary spending or finding ways to stretch your budget further.
+        </p>
+  
+        <!-- Subheading 3 -->
+        <h6>Banks Thrive</h6>
+        <hr>
+        <p>
+          Banks thrive on more transactions, and our purpose aligns perfectly with theirs: while they encourage shopping, we help you save along the way. With Genie, you can shop online, save more, and enjoy the best of both worlds.
+        </p>
+      </div>
+  
+      <div class="overview-image">
+        <img src="overview.jpg" alt="Overview Image" />
+      </div>
+    </div>
+  </section>
+
+<!-- Features Section -->
+<section class="features-section" id="features">
+    <h2 class="features-title">Features</h2>
+    <p class="features-description">
+      We created this extension to help you better understand your finances and provide an easy way to spend wisely and save more.
+    </p>
+  
+    <div class="features-container">
+      <!-- Feature 1: Spending Alerts -->
+      <div class="feature-card red-card">
+        <img src="bell.png" alt="Spending Alerts" class="feature-icon" />
+        <h3>Spending Alerts</h3>
+        <p>Display pop-ups when spending patterns exceed predefined thresholds.</p>
+      </div>
+  
+      <!-- Feature 2: Tracks Online Purchases -->
+      <div class="feature-card blue-card">
+        <img src="cart.png" alt="Tracks Online Purchases" class="feature-icon" />
+        <h3>Tracks Online Purchases</h3>
+        <p>Monitors your online purchases using your transaction history.</p>
+      </div>
+  
+      <!-- Feature 3: Insightful Suggestions -->
+      <div class="feature-card green-card">
+        <img src="glass.png" alt="Insightful Suggestions" class="feature-icon" />
+        <h3>Insightful Suggestions</h3>
+        <p>Genie analyzes your spending habits, offering insights into recurring patterns and their costs.</p>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Meet the Team Section -->
+<section class="team-section" id="team">
+    <h2 class="team-title">Meet the Team</h2>
+  
+    <div class="team-container">
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <img src="mike.jpg" alt="Nafi" class="team-photo" />
+        <h5>Mike</h5>
+      </div>
+  
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <img src="erika.jpg" alt="Erika" class="team-photo" />
+        <h5>Erika</h5>
+      </div>
+  
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <img src="nafi.jpg" alt="Mike" class="team-photo" />
+        <h5>Nafi</h5>
+      </div>
+  
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <img src="nguyen.png" alt="Nguyen" class="team-photo" />
+        <h5>Nguyen</h5>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+      <!-- Footer Links (2 Columns) -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <a href="#install">Install</a>
+          <a href="#features">Features</a>
+          <a href="#overview">Overview</a>
+        </div>
+        <div class="footer-column">
+          <a href="#team">Team</a>
+          <a href="#stats">Stats</a>
+        </div>
+      </div>
+  
+      <!-- Footer Logo and Text -->
+      <div class="footer-logo">
+        <span class="footer-brand">Genie</span>
+        <img src="white.png" alt="Genie Logo" />
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
