@@ -1,5 +1,5 @@
 import type React from 'react';
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Rewards from '../features/rewards/index';
 import Signin from '../features/sign-in';
 import SignUp from '../features/sign-up/index';
@@ -8,39 +8,43 @@ import Suggestions from '../features/suggestions/index';
 import TransactionData from '../features/transaction-data/index';
 
 const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState('sign-in');
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      const path = window.location.pathname;
+      if (path === '/sign-in') {
+        setCurrentPage('sign-in');
+      } else if (path === '/sign-up') {
+        setCurrentPage('sign-up');
+      } else if (path === '/rewards') {
+        setCurrentPage('rewards');
+      } else if (path === '/spending-alert') {
+        setCurrentPage('spending-alert');
+      } else if (path === '/suggestions') {
+        setCurrentPage('suggestions');
+      } else if (path === '/transaction-data') {
+        setCurrentPage('transaction-data');
+      }
+    };
+
+    window.addEventListener('popstate', handleLocationChange);
+    handleLocationChange();
+
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+    };
+  }, []);
+
   return (
-    <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/sign-in">Sign In</Link>
-          </li>
-          <li>
-            <Link to="/sign-up">Sign Up</Link>
-          </li>
-          <li>
-            <Link to="/rewards">Rewards</Link>
-          </li>
-          <li>
-            <Link to="/spending-alert">Spending Alert</Link>
-          </li>
-          <li>
-            <Link to="/suggestions">Suggestions</Link>
-          </li>
-          <li>
-            <Link to="/transaction-data">Transaction Data</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/rewards" element={<Rewards />} />
-        <Route path="/spending-alert" element={<SpendingAlert />} />
-        <Route path="/suggestions" element={<Suggestions />} />
-        <Route path="/transaction-data" element={<TransactionData />} />
-      </Routes>
-    </Router>
+    <div>
+      {currentPage === 'sign-in' && <Signin />}
+      {currentPage === 'sign-up' && <SignUp />}
+      {currentPage === 'rewards' && <Rewards />}
+      {currentPage === 'spending-alert' && <SpendingAlert />}
+      {currentPage === 'suggestions' && <Suggestions />}
+      {currentPage === 'transaction-data' && <TransactionData />}
+    </div>
   );
 };
 
