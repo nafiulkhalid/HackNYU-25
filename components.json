@@ -4,9 +4,9 @@
   "rsc": false,
   "tsx": true,
   "tailwind": {
-    "config": "tailwind.config.ts",
-    "css": "./entrypoints/popup/style.css",
-    "baseColor": "zinc",
+    "config": "tailwind.config.js",
+    "css": "./assets/tailwind.css",
+    "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },

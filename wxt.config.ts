@@ -1,5 +1,6 @@
 // wxt.config.ts
 import { defineConfig } from 'wxt';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   extensionApi: 'chrome',
@@ -7,4 +8,7 @@ export default defineConfig({
   alias: {
     '@': './entrypoints/popup',
   },
+  vite: () => ({
+    plugins: [react()],
+  }),
 });
