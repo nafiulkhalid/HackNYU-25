@@ -12,6 +12,7 @@
       "@entrypoints/*": ["entrypoints/*"],
       "@hooks/*": ["hooks/*"],
       "@modules/*": ["modules/*"],
+      "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"]
     }
   }

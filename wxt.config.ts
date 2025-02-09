@@ -1,4 +1,5 @@
 import { defineConfig } from 'wxt';
+import type { UserConfig } from 'wxt';
 
 export default defineConfig({
   extensionApi: 'chrome',
@@ -11,6 +12,7 @@ export default defineConfig({
     '@entrypoints': './entrypoints',
     '@hooks': './hooks',
     '@modules': './modules',
-    '@utils': './utils'
+    '@utils': './utils',
+    '@pages': './pages'
   },
-});
+} as UserConfig);
