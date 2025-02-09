@@ -1,6 +1,6 @@
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'wxt';
 import type { UserConfig } from 'wxt';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   extensionApi: 'chrome',
@@ -15,9 +15,9 @@ export default defineConfig({
     '@modules': './modules',
     '@utils': './utils',
     '@features': './entrypoints/features',
-    '@popup': './entrypoints/popup',   
+    '@popup': './entrypoints/popup',
   },
   vite: () => ({
-          plugins: [react()],
+    plugins: [react()],
   }),
 } as UserConfig);

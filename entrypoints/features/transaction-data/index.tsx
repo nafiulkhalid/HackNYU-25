@@ -4,6 +4,6 @@ export const TransactionData: React.FC = () => {
       <h1 className="transaction-data-text">Transaction Data</h1>
     </div>
   );
-}
+};
 TransactionData.displayName = 'TransactionData';
 export default TransactionData;

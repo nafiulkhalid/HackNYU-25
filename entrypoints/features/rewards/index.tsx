@@ -4,7 +4,7 @@ export const Rewards = () => {
       <h1 className="text-3xl font-bold">Rewards</h1>
       <p className="text-lg">Coming soon...</p>
     </div>
-  );             
+  );
 };
 Rewards.displayName = 'Rewards';
 export default Rewards;

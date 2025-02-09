@@ -113,7 +113,6 @@ declare module '*.txt' {
   export default content;
 }
 
-
 declare module '*.module.css' {
   const content: { [className: string]: string };
   export default content;
@@ -131,7 +130,7 @@ declare module '*.module.sass' {
 
 /**
  * @note: This is a global declaration for the Document and AppRouterInstance interfaces.
-*/
+ */
 declare global {
   interface Document {
     startViewTransition: (callback: () => void) => void;
