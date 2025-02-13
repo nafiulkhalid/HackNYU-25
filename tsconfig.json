@@ -2,7 +2,7 @@
   "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
     "allowImportingTsExtensions": true,
-    "jsx": "react-jsx", 
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "types": ["chrome"],
     "paths": {
@@ -11,10 +11,11 @@
       "@components/*": ["components/*"],
       "@composables/*": ["composables/*"],
       "@entrypoints/*": ["entrypoints/*"],
+      "@features/*": ["entrypoints/features/*"],
       "@hooks/*": ["hooks/*"],
       "@modules/*": ["modules/*"],
-      "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@popup/*": ["entrypoints/popup/*"]
     }
   }
 }

@@ -1,253 +1,253 @@
 /* ============================
    General Reset
    ============================ */
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* ============================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ============================
      Navbar Styles
      ============================ */
-  
-  /* Navbar Container */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    color: white;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  /* Logo (Left) */
-  .navbar-logo a {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Features (Center) */
-  .navbar-features {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-features a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-features a:hover {
-    color: #007bff;
-  }
-  
-  /* Sign In / Sign Up (Right) */
-  .navbar-auth {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .btn {
-    padding: 8px 16px;
-    border: 1px solid white;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: bold;
-  }
-  
-  .btn:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  /* Special Style for Sign Up Button */
-  .signup-btn {
-    background-color: #007bff;
-    border: none;
-  }
-  
-  .signup-btn:hover {
-    background-color: #0056b3;
-    color: white;
-  }
-  
-  /* ============================
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo (Left) */
+.navbar-logo a {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Features (Center) */
+.navbar-features {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-features a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-features a:hover {
+  color: #007bff;
+}
+
+/* Sign In / Sign Up (Right) */
+.navbar-auth {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: 1px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Special Style for Sign Up Button */
+.signup-btn {
+  background-color: #007bff;
+  border: none;
+}
+
+.signup-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* ============================
      Toggle Menu Styles
      ============================ */
-  
-  /* Toggle Icon (Hidden by Default) */
+
+/* Toggle Icon (Hidden by Default) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile Menu (Hidden by Default) */
+.mobile-menu {
+  display: none;
+  background-color: #000;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.mobile-menu.show {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid #444;
+}
+
+.mobile-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.mobile-menu li a:hover {
+  background-color: #007bff;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .navbar-features,
+  .navbar-auth {
+    display: none;
+  }
+
   .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  /* Mobile Menu (Hidden by Default) */
-  .mobile-menu {
-    display: none;
-    background-color: #000;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    z-index: 1000;
-  }
-  
-  .mobile-menu.show {
     display: block;
   }
-  
-  .mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .mobile-menu li {
-    border-bottom: 1px solid #444;
-  }
-  
-  .mobile-menu li a {
-    display: block;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .mobile-menu li a:hover {
-    background-color: #007bff;
-  }
-  
-  /* Responsive Design for Small Screens */
-  @media (max-width: 768px) {
-    .navbar-features,
-    .navbar-auth {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
-  /* ============================
+}
+
+/* ============================
    Hero Section (Updated)
    ============================ */
 
-   .hero-section {
-    position: relative; /* To position the balls inside the section */
-    overflow: hidden;   /* Hide balls when they move outside the section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    text-align: center;
-    padding: 20px;
-    background-color: #f7f5ef;
+.hero-section {
+  position: relative; /* To position the balls inside the section */
+  overflow: hidden; /* Hide balls when they move outside the section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f5ef;
+}
+
+/* Blurry Balls */
+.blurry-ball {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Blurry effect */
+  opacity: 0.7;
+  animation: move 10s infinite alternate ease-in-out;
+  z-index: 0; /* Place behind the text */
+}
+
+/* Different Sizes, Colors, and Positions */
+.ball1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 0, 150, 0.6);
+  top: 10%;
+  left: 5%;
+  animation-duration: 12s;
+}
+
+.ball2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 200, 255, 0.6);
+  top: 50%;
+  left: 70%;
+  animation-duration: 15s;
+}
+
+.ball3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(150, 255, 0, 0.6);
+  top: 80%;
+  left: 20%;
+  animation-duration: 18s;
+}
+
+/* Blurry Ball Animation */
+@keyframes move {
+  from {
+    transform: translate(0, 0) scale(1);
   }
-  
-  /* Blurry Balls */
-  .blurry-ball {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px); /* Blurry effect */
-    opacity: 0.7;
-    animation: move 10s infinite alternate ease-in-out;
-    z-index: 0; /* Place behind the text */
+  to {
+    transform: translate(100px, -100px) scale(1.2);
   }
-  
-  /* Different Sizes, Colors, and Positions */
-  .ball1 {
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 0, 150, 0.6);
-    top: 10%;
-    left: 5%;
-    animation-duration: 12s;
-  }
-  
-  .ball2 {
-    width: 400px;
-    height: 400px;
-    background: rgba(0, 200, 255, 0.6);
-    top: 50%;
-    left: 70%;
-    animation-duration: 15s;
-  }
-  
-  .ball3 {
-    width: 250px;
-    height: 250px;
-    background: rgba(150, 255, 0, 0.6);
-    top: 80%;
-    left: 20%;
-    animation-duration: 18s;
-  }
-  
-  /* Blurry Ball Animation */
-  @keyframes move {
-    from {
-      transform: translate(0, 0) scale(1);
-    }
-    to {
-      transform: translate(100px, -100px) scale(1.2);
-    }
-  }
-  
-  /* Hero Content On Top of Blurry Balls */
-  .hero-content {
-    position: relative;
-    z-index: 1; /* Ensure content stays above the balls */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  /* Logo and Heading */
-  .hero-logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .hero-header {
-    font-size: 72px;
-    font-weight: bold;
-    color: #000;
-    font-family: 'Georgia', serif;
-    margin: 0;
-  }
-  
-  .hero-logo {
-    width: 80px;
-    height: auto;
-  }
-  
-  .hero-tagline {
-    font-size: 26px;
-    color: #000;
-    font-weight: 600;
-    font-family: 'Playfair Display', serif;
-    margin-top: 10px;
-    text-transform: capitalize;
-  }
+}
+
+/* Hero Content On Top of Blurry Balls */
+.hero-content {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the balls */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo and Heading */
+.hero-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-header {
+  font-size: 72px;
+  font-weight: bold;
+  color: #000;
+  font-family: "Georgia", serif;
+  margin: 0;
+}
+
+.hero-logo {
+  width: 80px;
+  height: auto;
+}
+
+.hero-tagline {
+  font-size: 26px;
+  color: #000;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
 
 .download-btn {
   display: inline-block;
@@ -277,388 +277,381 @@
   transform: scale(0.95); /* Button Click "Press" Effect */
 }
 
-  /* ============================
+/* ============================
      Section Placeholder Styles
      ============================ */
-  section {
-    padding: 100px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    font-size: 24px;
-  }
-  
-  /* ============================
+section {
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* ============================
    Overview Section
    ============================ */
 
 .overview-section {
-    background-color: white;
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-  }
-  
-  /* Centered Section Title */
-  .overview-title {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    margin-bottom: 40px;
-    text-transform: capitalize;
-  }
-  
-  /* Content Layout */
-  .overview-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Text Section */
-  .overview-text {
-    max-width: 600px;
-    line-height: 1.8;
-    color: #333;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Arial', sans-serif;
-    text-align: justify;
-  }
-  
-  /* Subheadings (Centered and Smaller Font) */
-  .overview-text h6 {
-    font-size: 16px; /* Smaller Font Size */
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    margin: 10px 0 5px;
-    text-align: center; /* Center Alignment */
-  }
-  
-  /* Simple Line Break */
-  .overview-text hr {
-    border: none;
-    height: 2px;
-    background-color: #000;
-    width: 50px;
-    margin: 5px auto 15px auto; /* Center the Line */
-  }
-  
-  /* Image Section */
-  .overview-image img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  /* ============================
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Centered Section Title */
+.overview-title {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+/* Content Layout */
+.overview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Text Section */
+.overview-text {
+  max-width: 600px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Arial", sans-serif;
+  text-align: justify;
+}
+
+/* Subheadings (Centered and Smaller Font) */
+.overview-text h6 {
+  font-size: 16px; /* Smaller Font Size */
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  margin: 10px 0 5px;
+  text-align: center; /* Center Alignment */
+}
+
+/* Simple Line Break */
+.overview-text hr {
+  border: none;
+  height: 2px;
+  background-color: #000;
+  width: 50px;
+  margin: 5px auto 15px auto; /* Center the Line */
+}
+
+/* Image Section */
+.overview-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ============================
      Responsive Design
      ============================ */
-  
-  @media (min-width: 768px) {
-    .overview-content {
-      flex-direction: row; /* Text and Image Side by Side */
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-    }
-  
-    .overview-text {
-      max-width: 50%;
-    }
-  
-    .overview-title {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-  
-    .overview-image img {
-      max-width: 450px;
-      margin-left: 20px;
-    }
+
+@media (min-width: 768px) {
+  .overview-content {
+    flex-direction: row; /* Text and Image Side by Side */
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
   }
-  
-  /* ============================
+
+  .overview-text {
+    max-width: 50%;
+  }
+
+  .overview-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .overview-image img {
+    max-width: 450px;
+    margin-left: 20px;
+  }
+}
+
+/* ============================
    Section Layout (Full-Screen Height)
    ============================ */
 
 section {
-    min-height: 100vh;        /* Ensures each section fills the viewport height */
-    padding: 60px 20px 100px; /* Top & Side Padding + Extra Bottom Padding */
-    display: flex;            /* Flexbox for vertical alignment */
-    flex-direction: column;   /* Stack content vertically */
-    justify-content: center;  /* Center content vertically */
-    align-items: center;      /* Center content horizontally */
-    box-sizing: border-box;   /* Include padding in height calculations */
-  }
-  
+  min-height: 100vh; /* Ensures each section fills the viewport height */
+  padding: 60px 20px 100px; /* Top & Side Padding + Extra Bottom Padding */
+  display: flex; /* Flexbox for vertical alignment */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+
 /* ============================
    Features Section
    ============================ */
 
-   .features-section {
-    background-color: #ffffff;
-    padding: 60px 20px 100px;
-    text-align: center;
-  }
-  
-  .features-title {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    margin-bottom: 20px;
-  }
-  
-  .features-description {
-    font-size: 18px;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Features Container */
+.features-section {
+  background-color: #ffffff;
+  padding: 60px 20px 100px;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  margin-bottom: 20px;
+}
+
+.features-description {
+  font-size: 18px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Features Container */
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Feature Card Styles */
+.feature-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Icons */
+.feature-icon {
+  width: 80px; /* Adjusted for Larger Size */
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Feature Titles */
+.feature-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: "Georgia", serif;
+}
+
+/* Feature Descriptions */
+.feature-card p {
+  font-size: 16px;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+}
+
+/* Color Themes for Cards */
+.red-card {
+  background-color: #ffcccc; /* Light Red */
+}
+
+.blue-card {
+  background-color: #cce5ff; /* Light Blue */
+}
+
+.green-card {
+  background-color: #ccffcc; /* Light Green */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .features-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
   }
-  
-  /* Feature Card Styles */
-  .feature-card {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .features-container {
+    grid-template-columns: 1fr; /* 1 card per row */
   }
-  
-  /* Hover Effect */
-  .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Feature Icons */
-  .feature-icon {
-    width: 80px;  /* Adjusted for Larger Size */
-    height: 80px;
-    margin-bottom: 20px;
-  }
-  
-  /* Feature Titles */
-  .feature-card h3 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-    font-family: 'Georgia', serif;
-  }
-  
-  /* Feature Descriptions */
-  .feature-card p {
-    font-size: 16px;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.5;
-  }
-  
-  /* Color Themes for Cards */
-  .red-card {
-    background-color: #ffcccc; /* Light Red */
-  }
-  
-  .blue-card {
-    background-color: #cce5ff; /* Light Blue */
-  }
-  
-  .green-card {
-    background-color: #ccffcc; /* Light Green */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .features-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .features-container {
-      grid-template-columns: 1fr; /* 1 card per row */
-    }
-  }
-  
-  /* ============================
+}
+
+/* ============================
    Footer Section
    ============================ */
 
 .footer {
-    background-color: #000;  /* Black Background */
-    color: white;            /* White Text */
-    padding: 40px 20px;
-  }
-  
+  background-color: #000; /* Black Background */
+  color: white; /* White Text */
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+/* Footer Columns */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Footer Links Style */
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Georgia", serif;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff; /* Hover Effect */
+}
+
+/* Footer Logo and Branding */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+}
+
+/* Smaller Footer Logo */
+.footer-logo img {
+  width: 30px; /* Smaller Logo */
+  height: auto;
+}
+
+/* Responsive Design: Two Columns on Smaller Screens */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  
-  /* Footer Links */
-  .footer-links {
-    display: flex;
-    gap: 50px;
-  }
-  
-  /* Footer Columns */
-  .footer-column {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-  
-  /* Footer Links Style */
-  .footer a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: 'Georgia', serif;
-    transition: color 0.3s ease;
-  }
-  
-  .footer a:hover {
-    color: #007bff;  /* Hover Effect */
-  }
-  
-  /* Footer Logo and Branding */
-  .footer-logo {
-    display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
-  
-  .footer-brand {
-    font-size: 28px;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Two Columns */
+    gap: 20px 40px; /* Row and Column Gaps */
+    text-align: center;
   }
-  
-  /* Smaller Footer Logo */
-  .footer-logo img {
-    width: 30px;  /* Smaller Logo */
-    height: auto;
+
+  .footer-column {
+    align-items: center;
   }
-  
-  /* Responsive Design: Two Columns on Smaller Screens */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-  
-    .footer-links {
-      display: grid;
-      grid-template-columns: repeat(2, auto); /* Two Columns */
-      gap: 20px 40px; /* Row and Column Gaps */
-      text-align: center;
-    }
-  
-    .footer-column {
-      align-items: center;
-    }
-  }
-  
+}
 
 /* ============================
    Meet the Team Section
    ============================ */
 
-   .team-section {
-    background-color: white;
-    padding: 60px 20px 100px;
-    text-align: center;
-  }
-  
-  .team-title {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    margin-bottom: 40px;
-    text-transform: lowercase;
-  }
-  
-  /* Team Container Layout */
+.team-section {
+  background-color: white;
+  padding: 60px 20px 100px;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  margin-bottom: 40px;
+  text-transform: lowercase;
+}
+
+/* Team Container Layout */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Team Card Styles */
+.team-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Photo */
+.team-photo {
+  width: 150px; /* Same Size for All Images */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular Image */
+  margin-bottom: 15px;
+}
+
+/* Team Member Name */
+.team-card h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  font-family: "Georgia", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .team-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
   }
-  
-  /* Team Card Styles */
-  .team-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  /* Hover Effect */
-  .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Team Photo */
-  .team-photo {
-    width: 150px;  /* Same Size for All Images */
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;  /* Circular Image */
-    margin-bottom: 15px;
-  }
-  
-  /* Team Member Name */
-  .team-card h5 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    font-family: 'Georgia', serif;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .team-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .team-container {
-      grid-template-columns: 1fr; /* 1 column */
-    }
-  }
-  
-  
+}
 
-
-
-  
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
