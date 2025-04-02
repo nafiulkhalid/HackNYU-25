@@ -24,3 +24,10 @@ ___What's Genie___
 > Pin websites so if there's a sale or pricedrop, users who pinned the site receive a message notification
 
 Aren't they a lot of features? Yes. Even I was surprised too with the potentiality and seriousness of the event! Although many of them were in our optional planning in this project design document, with my incredible teammates Erika Neri, Nguyen Tran, and Mike Odnis we brought them all to reality!
+
+---
+
+A HackNYU2025 Project
+
+---
+* HackNYU is the annual hackathon of New York University
