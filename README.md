@@ -1,4 +1,6 @@
-HackNYU-2025
+<img width="1470" alt="Genie" src="https://github.com/user-attachments/assets/19bc95ef-e2a3-48e6-8ac2-442b1b7f91d3" />
+
+# **HackNYU-2025**
 
 Excited to share another AMAZING weekend when I went to NY for the first time! Despite the dilemma between DevFest & HackNYU this year, I attended HackNYU-2025. Due to Winter Storm Garnett in NY, I got a 6-hour layover to my favorite city, Boston. During this 36-hour hackathon of Major League Hacking (MLH), we competed for the 'Fintech/Quant' track and built Genie—your one-stop, all-in-one saving partner, preventing you from overspending.
 
